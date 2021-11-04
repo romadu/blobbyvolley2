@@ -6,6 +6,10 @@ project(Blobby)
 
 option(BUILD_TESTS "Build test programs" OFF)
 
+if (POLICY CMP0072)
+    cmake_policy (SET CMP0072 NEW)
+endif(POLICY CMP0072)
+
 # process the config.h
 configure_file(${Blobby_SOURCE_DIR}/config.h.in
                ${Blobby_BINARY_DIR}/config.h)

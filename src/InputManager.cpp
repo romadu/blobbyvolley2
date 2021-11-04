@@ -266,7 +266,7 @@ void InputManager::updateInput()
 					JoystickAction::NONE, event.jbutton.button);
 
 				// Handle Axis
-				if (event.type == SDL_JOYAXISMOTION)
+/*				if (event.type == SDL_JOYAXISMOTION)
 				{
 					if (abs(event.jaxis.value) > 10000)
 					{
@@ -280,8 +280,10 @@ void InputManager::updateInput()
 						mLastJoyAction = joyAction.toString();
 					}
 				}
+*/
 				// Handle Buttons
-				else if (event.type == SDL_JOYBUTTONDOWN)
+				//else 
+				if (event.type == SDL_JOYBUTTONDOWN)
 				{
 					joyAction.type = JoystickAction::BUTTON;
 					mLastJoyAction = joyAction.toString();
